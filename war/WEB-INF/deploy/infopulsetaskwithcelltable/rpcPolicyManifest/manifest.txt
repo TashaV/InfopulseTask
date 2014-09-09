@@ -1,2 +1,2 @@
-# Module infopulsetaskusingcelltable
+# Module infopulsetaskwithcelltable
 # RPC service class, partial path of RPC policy file

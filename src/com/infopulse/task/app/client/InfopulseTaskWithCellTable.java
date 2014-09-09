@@ -3,6 +3,8 @@ package com.infopulse.task.app.client;
 import java.util.Arrays;
 import java.util.List;
 
+import com.infopulse.task.app.client.dataentities.Role;
+import com.infopulse.task.app.client.dataentities.User;
 import com.google.gwt.cell.client.CheckboxCell;
 import com.google.gwt.cell.client.FieldUpdater;
 import com.google.gwt.cell.client.SelectionCell;
@@ -13,29 +15,26 @@ import com.google.gwt.user.cellview.client.CellTable;
 import com.google.gwt.user.cellview.client.Column;
 import com.google.gwt.user.cellview.client.Header;
 import com.google.gwt.user.cellview.client.TextColumn;
-import com.google.gwt.user.client.ui.RootLayoutPanel;
+import com.google.gwt.user.client.ui.RootPanel;
+import com.google.gwt.user.client.ui.Widget;
 import com.google.gwt.view.client.DefaultSelectionEventManager;
 import com.google.gwt.view.client.MultiSelectionModel;
-import com.infopulse.task.app.client.dataentities.Role;
-import com.infopulse.task.app.client.dataentities.User;
 
 /**
  * Entry point classes define <code>onModuleLoad()</code>.
  */
-public class InfopulseTaskUsingCellTable implements EntryPoint {
-
+public class InfopulseTaskWithCellTable implements EntryPoint {
 	/**
 	 * This is the entry point method.
 	 */
 	public void onModuleLoad() {
-		
-		RootLayoutPanel.get().add(new MySplitLayoutPanel(initUserCellTable()));
+		RootPanel.get().add(initUserDataGrid());
 	}
 	
 	/**
 	 * This method initializing the CellTable widget
 	 */
-	private static CellTable<User> initUserCellTable() {
+	private static Widget initUserDataGrid() {
 		final CellTable<User> cellTable = new CellTable<User>();
 
 		// Add a selection model to handle user selection.
@@ -117,7 +116,8 @@ public class InfopulseTaskUsingCellTable implements EntryPoint {
 	}
 	
 	/**
-	 * @return List of values for role SelectionCell 
+	 * 
+	 * @return
 	 */
 	private static List<String> getAcceptableValues() {
         return Arrays.asList(Role.Admin.name(),
