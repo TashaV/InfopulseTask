@@ -36,11 +36,11 @@ public class User {
 	}
 	
 	public String getRole(){
-		return role.toString();
+		return role.name();
 	}
 	
 	public void setRole(String role) {
 		this.role = Role.valueOf(role);
 	}
-	
+
 }

@@ -3,19 +3,22 @@
 	xmlns:g="urn:import:com.google.gwt.user.client.ui"
 	xmlns:c="urn:import:com.google.gwt.user.cellview.client">
 	<ui:style>
+	
 	</ui:style>
 	<g:SplitLayoutPanel>
-		<g:north size='300' unit='EM'>
+		<g:north size="300">
 			<g:FlowPanel>
-				<c:DataGrid ui:field="grid" />
+				<c:CellTable ui:field="cellTable" />
 			</g:FlowPanel>
 		</g:north>
-		<g:west size='680' unit='EM'>
+		<g:west size="680">
 			<g:FlowPanel>
+			
 			</g:FlowPanel>
 		</g:west>
-		<g:center size='250' unit='EM'>
+		<g:center>
 			<g:FlowPanel>
+			
 			</g:FlowPanel>
 		</g:center>
 	</g:SplitLayoutPanel>

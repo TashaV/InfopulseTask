@@ -9,7 +9,7 @@
   
   <!-- Default page to serve -->
   <welcome-file-list>
-    <welcome-file>InfopulseTask.html</welcome-file>
+    <welcome-file>InfopulseTaskUsingCellTable.html</welcome-file>
   </welcome-file-list>
 
 </web-app>

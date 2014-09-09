@@ -3,7 +3,7 @@ package com.infopulse.task.app.client;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
-import com.google.gwt.user.cellview.client.DataGrid;
+import com.google.gwt.user.cellview.client.CellTable;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.RootLayoutPanel;
 import com.google.gwt.user.client.ui.Widget;
@@ -17,14 +17,14 @@ public class MySplitLayoutPanel extends Composite {
 	interface MySplitLayoutPanelUiBinder extends
 			UiBinder<Widget, MySplitLayoutPanel> {
 	}
-
+	
 	@UiField
-	DataGrid<User> grid;
+	CellTable<User> cellTable;
 
-	public MySplitLayoutPanel(DataGrid<User> grid) {
+	public MySplitLayoutPanel(CellTable<User> cellTable) {
 		initWidget(uiBinder.createAndBindUi(this));
-		this.grid = grid;
-	    RootLayoutPanel.get().add(grid);
+		this.cellTable = cellTable;
+		RootLayoutPanel.get().add(cellTable);
 	}
 
 }
