@@ -1,10 +1,8 @@
 package com.infopulse.task.app.client.dataentities;
 
-/**
- * A simple data type that represents the user.
- */
-public class User {
+import com.infopulse.task.app.client.dataentities.Role;
 
+public class User {
 	private final String id;
 	private final String name;
 	private final String surname;
@@ -42,5 +40,4 @@ public class User {
 	public void setRole(String role) {
 		this.role = Role.valueOf(role);
 	}
-
 }
